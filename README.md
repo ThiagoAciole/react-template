@@ -16,7 +16,7 @@ Template base para projetos React com [AcyUI](https://github.com/acyui), TypeScr
 ### Passo 1 — Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/ThiagoAciole/react-template.git
 cd template
 ```
 
