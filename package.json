@@ -12,7 +12,7 @@
     "create": "node scripts/create-project.mjs"
   },
   "dependencies": {
-    "@acyui/components": "^0.1.4",
+    "acioleui": "^0.1.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

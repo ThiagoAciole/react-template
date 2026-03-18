@@ -1,13 +1,13 @@
-# React Template (AcyUI)
+# React Template (AcioleUI)
 
-Template base para projetos React com [AcyUI](https://github.com/acyui), TypeScript e Vite.
+Template base para projetos React com [AcioleUI](https://github.com/Acioleui), TypeScript e Vite.
 
 ## Tecnologias
 
 - React 19
 - TypeScript
 - Vite
-- AcyUI Components
+- AcioleUI Components
 
 ---
 

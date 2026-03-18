@@ -47,7 +47,7 @@ function toPascalCase(str) {
     .replace(/-/g, " ")
     .replace(
       /\w\S*/g,
-      (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(),
+      (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
     )
     .replace(/\s/g, "");
 }
@@ -67,7 +67,7 @@ function copyTemplate(src, dest) {
         .replace(/\\/g, "/")
         .replace(/^\//, "");
       return !IGNORE.some(
-        (ignored) => rel === ignored || rel.startsWith(ignored + "/"),
+        (ignored) => rel === ignored || rel.startsWith(ignored + "/")
       );
     },
   });
@@ -88,7 +88,7 @@ function prompt(rl, question) {
 
 async function main() {
   log(`\n${BOLD}${CYAN}╔══════════════════════════════════════╗${RESET}`);
-  log(`${BOLD}${CYAN}║      AcyUI React Project Creator     ║${RESET}`);
+  log(`${BOLD}${CYAN}║      AcioleUI React Project Creator     ║${RESET}`);
   log(`${BOLD}${CYAN}╚══════════════════════════════════════╝${RESET}\n`);
 
   const rl = createInterface({ input: process.stdin, output: process.stdout });
@@ -105,7 +105,7 @@ async function main() {
     }
     if (!isValidName(name)) {
       error(
-        `Nome inválido: "${name}". Use apenas letras minúsculas, números e hífens.`,
+        `Nome inválido: "${name}". Use apenas letras minúsculas, números e hífens.`
       );
       continue;
     }
@@ -115,7 +115,7 @@ async function main() {
   // 2. Pergunta se quer instalar as dependências
   const installAnswer = await prompt(
     rl,
-    `${BOLD}Instalar dependências com npm install? ${DIM}(s/N)${RESET} `,
+    `${BOLD}Instalar dependências com npm install? ${DIM}(s/N)${RESET} `
   );
   const shouldInstall = installAnswer.trim().toLowerCase() === "s";
 
@@ -168,7 +168,7 @@ async function main() {
 
   // Generate simple README
   step("Gerando README.md...");
-  const readme = `# ${displayName}\n\nProjeto React criado com o template AcyUI.\n\n## Tecnologias\n\n- React 19\n- TypeScript\n- Vite\n- AcyUI Components\n\n## Scripts\n\n\`\`\`bash\nnpm start        # inicia o servidor de desenvolvimento\nnpm run build    # build de produção\nnpm run preview  # preview do build\nnpm run lint     # verifica o código\n\`\`\`\n`;
+  const readme = `# ${displayName}\n\nProjeto React criado com o template AcioleUI.\n\n## Tecnologias\n\n- React 19\n- TypeScript\n- Vite\n- AcioleUI Components\n\n## Scripts\n\n\`\`\`bash\nnpm start        # inicia o servidor de desenvolvimento\nnpm run build    # build de produção\nnpm run preview  # preview do build\nnpm run lint     # verifica o código\n\`\`\`\n`;
   writeFileSync(join(destDir, "README.md"), readme, "utf-8");
   success("README.md gerado.");
 
